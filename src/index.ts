@@ -5,8 +5,8 @@ import { userRouter } from './modules/user/userRouter.js';
 const server = express();
 server.use(express.json());
 
-server.get('/', (req, res) => {
-  res.send('Hello World');
+server.get('/health', (req, res) => {
+  res.send('Health check: PASSED!');
 });
 
 server.use('/user', userRouter);
